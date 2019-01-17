@@ -1,0 +1,14 @@
+{
+  "name": "reports-server",
+  "version": "1.0.0",
+  "description": "Backend server for reports app",
+  "main": "src/index.js",
+  "author": "Luis Aguilar",
+  "license": "MIT",
+  "scripts": {
+    "start": "node --experimental-modules src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
