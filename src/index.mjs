@@ -1,7 +1,9 @@
-const express = require('express')
+import express from 'express'
+import Config from './config'
 
+const config = Config()
 const app = express()
-const port = 3000
+const port = config.PORT
 
 app.get('/', (req, res) => {
     res.send('Ping me')
