@@ -1,5 +1,6 @@
 import express from 'express'
 import healthcheck from './controllers/healthcheck'
+import api from './controllers/api'
 
 export default class Server {
 
@@ -15,10 +16,12 @@ export default class Server {
 
     _configRoutes() {
         const handlers = {
-            healthCheck: healthcheck
+            healthCheck: healthcheck,
+            api: api
         }
 
         this.app.get('/healthcheck', handlers.healthCheck.healthcheck)
+        this.app.get('/github', handlers.api.getGithubData)
     }
 
 }
